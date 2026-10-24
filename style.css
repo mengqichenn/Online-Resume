@@ -1,0 +1,851 @@
+body {
+    background-color: #faf7ef;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+}
+
+/*==================================================
+                        HEADER
+===================================================*/
+header {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #FBF9F4;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    height: clamp(120px, 10vw, 165px);
+}
+
+.gloria-hallelujah-regular {
+    font-family: "Gloria Hallelujah", cursive;
+    font-style: normal;
+    justify-self: center;
+    color:black;
+    font-size: clamp(2.2rem, 2.8vw, 3rem);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px;
+    gap: 35px;
+}
+
+nav a {
+    color: #1C2321;
+    font-weight: bold;
+    font-size: clamp(1rem, 1.2vw, 1.3rem);
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+    color: #3E6659;
+    text-decoration: underline;
+}
+
+
+.navbutton {
+    border: 1px solid #1C2321;
+    border-radius: 6px;
+    padding: 8px 18px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbutton:hover {
+    background-color: #1C2321;
+    color: #FBF9F4;
+}
+
+/*================================================
+                        BODY
+==================================================*/
+
+section {
+    min-height: 100vh;
+    scroll-margin-top: 200px;
+    scroll-snap-align: start;
+    margin-bottom: 200px;
+}
+
+/*=========== Sections' Titles ===============*/
+
+main section h1 {
+    font-family: "Fraunces", "Iowan Old Style", serif;
+    font-weight: 500;
+    color: #1C2321;
+    font-size: clamp(2rem, 6vw, 3rem);
+}
+
+main section h2 {
+    font-family: "Fraunces", "Iowan Old Style", serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #1C2321;
+    margin: 0 0 20px 0;
+
+}
+
+main section h3 {
+    font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color:#55605C;
+    margin: 32px 0 12px 15px;
+}
+
+/*=============  Section Menu  =============*/
+
+#menu {
+    display: flex;
+    align-items: center;
+    gap: clamp(30px, 5vw, 80px);
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 190px 8vw 50px;
+}
+
+.menu {
+    flex: 1 1 58%;
+    min-width: 0;
+}
+
+.menu h1 {
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #3E6659;
+}
+
+.menu h2 {
+    font-family: "Fraunces", "Iowan Old Style", serif;
+    font-weight: 500;
+    font-size: 2.8rem;
+    color: #1C2321;
+    line-height: 1.5;
+    text-shadow: 5px 5px rgba(0,0,0,0.15);
+
+}
+
+.menu h3 {
+    font-family: "Fraunces", "Iowan Old Style", serif;
+    font-weight: 400;
+    font-size: 2.3rem;
+    color: #3E6659;
+    margin: 0;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/*learn more animation*/
+.learnmore {
+    display: inline-block;
+    font-size: 1rem;
+    font-family: "IBM Plex Mono", monospace;
+    color: black;
+    text-decoration: none;
+    animation-name: pulseAnimation;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0.6s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    box-shadow: 20px 20px 40px rgba(0,0,0,0.15);
+}
+
+@keyframes pulseAnimation {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.profile {
+    flex: 1 1 30%;
+    width: min(32vw, 380px);
+    min-width: 0;
+    margin-right: 100px;
+}
+
+.profile img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    filter: grayscale(20%) contrast(1.03);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+
+/*==============  Section AboutMe  ===============*/
+
+.about-wrap {
+    display:flex;
+    align-items: center;
+    gap: 60px;
+    width: 80%;
+    margin: 0 auto;
+
+}
+.about-wrap > article:last-child {
+    position: relative;
+    width: 50%;
+}
+.content {
+    width: 50%;
+    line-height: 2;
+}
+
+.content ul {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 16px;
+    gap: 20px;
+}
+
+.content li {
+    font-family: "IBM Plex Sans", "Segoe UI", sans-serif;;
+    font-size: 1rem;
+    color: #3E6659;
+    background-color: #E7EFE9;
+    border-radius: 4px;
+    padding: 6px 14px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+
+}
+
+.textjustify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.takeoff {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    top: -56px;
+    right: -18px;
+    width: clamp(250px, 26vw, 360px);
+    aspect-ratio: 220 / 150;
+    pointer-events: none;
+    filter: drop-shadow(0 8px 10px rgba(28, 35, 33, 0.12));
+}
+
+.takeoff-caption {
+    position: relative;
+    box-sizing: border-box;
+    flex: 1 1 40%;
+    padding: clamp(8px, 1vw, 12px);
+    border: 2px solid #3E6659;
+    border-radius: 16px 16px 16px 0;
+    background: #FBF9F4;
+    color: #1C2321;
+    font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+    font-size: clamp(0.72rem, 1vw, 1rem);
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+}
+
+
+.video-container {
+    position: relative;
+    top: 70px;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.video-contain {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 12px;
+}
+.video-container figcaption {
+    font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+    font-size: 0.75rem;
+    color: #55605C;
+    margin-top: 300px;
+}
+
+/*===============  Section Work  ==============*/
+
+#work {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 8vw;
+}
+
+.workcontent {
+    width: 60%;
+    display:flex;
+    flex-direction: column;
+}
+
+.chemist-credit {
+    width: min(230px, 80vw);
+    margin: -50px 0;
+    text-align: center;
+}
+
+.chemist-credit .chemist {
+    width: 100%;
+    margin: 0;
+    display: block;
+}
+
+.chemist-credit figcaption {
+    margin-top: 6px;
+    font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+    font-size: 0.75rem;
+    color: #55605C;
+}
+
+.itgirl {
+    display: block;
+    width: 100%;
+    margin:0;
+}
+
+.itgirl-credit {
+    position: relative;
+    top: -500px;
+    left: 300px;
+    width: min(280px, 80vw);
+    margin: 24px 0 0;
+    text-align: center;
+}
+
+.itgirl-credit figcaption {
+    margin-top: 6px;
+    font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+    font-size: 0.75rem;
+    color: #55605C;
+}
+
+#work > article:last-child {
+    flex: 1 1 220px;
+}
+
+dl {
+    border-left: 1px solid #DAD4C8;
+    margin: 8px 0 0 6px;
+    padding: 0;
+}
+
+.worklist {
+    position: relative;
+    padding: 4px 0 4px 32px;
+    margin: 0 0 36px 0;
+}
+
+.worklist::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 8px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #3E6659;
+}
+.worklist:hover {
+    transform: scale(1.02)
+
+}
+
+.worklist h4 {
+    font-family: "Fraunces", "Iowan Old Style", serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin: 0 0 4px 0;
+}
+
+.worklist dt {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.9rem;
+    color: #3E6659;
+    margin: 0 0 10px 0;
+}
+
+.worklist dd {
+    margin: 0;
+    line-height: 1.7;
+    color: #55605C;
+    font-size: 0.95rem;
+}
+
+.skillscontent {
+    width: 30%;
+    flex-shrink: 0;
+}
+
+.skillscontent h2 {
+    margin-top: 48px;
+}
+
+.skillscontent h2:first-child {
+    margin-top: 0;
+}
+
+.skill-subtitle {
+    font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #1C2321;
+    margin: 24px 0 10px 0;
+}
+
+
+.toollist {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.toollist li {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1rem;
+    color: #3E6659;
+    background-color: #E7EFE9;
+    border-radius: 4px;
+    padding: 4px 9px;
+}
+
+.dash-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dash-list li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 0.95rem;
+    color: #55605C;
+}
+.education {
+    padding-top: 100px;
+}
+
+/*=============  Section Actuality ============*/
+
+.actuwrap {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    margin-top: 120px;
+}
+
+.status-block {
+    border-left: 1px solid #DAD4C8;
+    padding-left: 28px;
+}
+
+.status-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.status-label h3 {
+    margin: 0;
+}
+.status-dot {
+    flex-shrink: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+.dot-current {
+    background-color: #3E6659;
+    box-shadow: 0 0 0 4px rgba(62,102,89,0.15);
+}
+
+.dot-next {
+    background-color: transparent;
+    border: 1px solid #3E6659;
+}
+
+.listcircle {
+    list-style-type: circle;
+    line-height: 1.5;
+}
+
+.status-block p {
+    margin-top: 16px;
+    line-height: 1.75;
+}
+
+
+/*=============  Section Contact  ===========*/
+
+.contactwrap {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+}
+
+.contactcontent {
+    position: relative;
+    top: 150px;
+    left: -10%;
+    padding: 50px 20px;
+    min-height: auto;
+    margin-bottom: 0;
+
+}
+
+.contactbutton {
+    display: inline-block;
+    background-color: transparent;
+    color: #1C2321;
+    border: 1px solid #1C2321;
+    border-radius: 0.5rem;
+    padding: 10px 30px;
+    margin: 10px;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contactbutton:hover {
+    background-color: #1C2321;
+    color: #FBF9F4;
+}
+
+/* -------------Form ---------*/
+form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 110px;
+    left: -5%;
+    align-items: stretch;
+    width: 320px;
+}
+
+.box {
+    margin: 10px 10px;
+    padding: 50px 20px;
+}
+
+form label {
+    font-family: "Fraunces", "Iowan Old Style", serif;
+    font-size: 1.2rem;
+    color: #55605C;
+    margin-top: 16px;
+}
+
+form input, textarea {
+    border: none;
+    border-bottom: 1px solid #DAD4C8;
+    background-color: transparent;
+    font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+    color: #1C2321;
+    font-size: 1rem;
+    padding: 8px 2px;
+}
+
+form input, textarea:focus {
+    outline: none;
+    border-bottom-color: #3E6659;
+}
+
+form input[type="submit"] {
+    align-self: flex-start;
+    font-family: "Fraunces", "Iowan Old Style", serif;
+    margin-top: 28px;
+    border: 1px solid #55605C;
+    border-radius: 4px;
+    padding: 10px 26px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #1C2321;
+    color: #FBF9F4;
+}
+
+
+/*=====================================================
+                        FOOTER
+======================================================*/
+
+
+footer {
+    text-align: center;
+    margin-top: 300px;
+}
+
+/*=====================================================
+                        MEDIA QUERY
+=======================================================*/
+
+@media (max-width: 767px) {
+
+    header {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 8px 12px 12px;
+        box-sizing: border-box;
+    }
+
+    .gloria-hallelujah-regular {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+        margin: 0;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 14px;
+        padding: 8px 0 0;
+        margin: 0;
+    }
+
+    nav a {
+        font-size: clamp(0.85rem, 3.4vw, 1rem);
+    }
+
+    .navbutton {
+        padding: 5px 10px;
+    }
+
+    section {
+        scroll-margin-top: 150px;
+        margin-bottom: 100px;
+    }
+
+    #menu {
+        flex-direction: column;
+        gap: 30px;
+        min-height: 100vh;
+        padding: 180px 8vw 40px;
+        width: 100%;
+    }
+
+    .menu h1 {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+    }
+
+    .menu h2 {
+        font-size: clamp(1.7rem, 7vw, 2.4rem);
+    }
+
+    .menu h3 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .profile {
+        width: min(75vw, 320px);
+        margin: 0 auto;
+        flex: 0 1 auto;
+    }
+
+    .about-wrap {
+        flex-direction: column;
+        width: 88%;
+        gap: 24px;
+    }
+
+    .content,
+    .about-wrap > article:last-child {
+        width: 100%;
+    }
+
+    .video-container {
+        top: 20px;
+        left: 0;
+        width: 100%;
+    }
+
+    .takeoff-caption {
+        font-size: clamp(0.68rem, 2.8vw, 0.82rem);
+    }
+
+    #work {
+        flex-direction: column;
+        padding: 0 7vw;
+    }
+
+    .workcontent,
+    .skillscontent {
+        width: 100%;
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .chemist-credit {
+        width: min(70vw, 230px);
+        margin: 20px auto;
+    }
+    .itgirl-credit {
+        width: min(70vw, 230px);
+        position: relative;
+        top: -500px;
+        left: 240px;
+    }
+    .actuwrap {
+        width: 88%;
+    }
+
+    .status-grid {
+        gap: 32px;
+        margin-top: 50px;
+    }
+
+    .contactwrap {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 0 7vw;
+    }
+
+    .contactwrap > h1 {
+        margin-bottom: 0;
+    }
+
+    .contactcontent {
+        top: auto;
+        left: auto;
+        margin: 0;
+        padding: 16px 0;
+    }
+
+    form {
+        top: auto;
+        left: auto;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px 0;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+
+    #menu {
+        gap: 30px;
+        padding: 150px 6vw 50px;
+    }
+
+    .menu {
+        width: 58%;
+        flex: 1 1 58%;
+    }
+
+    .menu h2 {
+        font-size: clamp(2rem, 4vw, 2.6rem);
+    }
+
+    .profile {
+        width: min(32vw, 300px);
+        margin: 0 auto;
+        flex: 0 1 30%;
+        margin-right: 60px;
+    }
+
+    #work {
+        flex-wrap: wrap;
+    }
+
+    .workcontent {
+        width: calc(65% - 20px);
+        min-width: 0;
+    }
+
+    .skillscontent {
+        width: 35%;
+        min-width: 0;
+    }
+
+    .chemist-credit {
+        max-width: 100%;
+        margin: 20px auto;
+    }
+    .itgirl-credit {
+
+        max-width: 80%;
+        margin: 24px auto 0;
+    }
+    .contactwrap {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .contactwrap > h1 {
+        flex-basis: 100%;
+    }
+
+    .contactcontent {
+        top: 0;
+        left: 0;
+        flex: 1 1 40%;
+        margin: 0;
+    }
+
+    form {
+        top: 0;
+        left: 0;
+        width: min(45%, 360px);
+        box-sizing: border-box;
+    }
+
+    nav ul {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+    }
+
+    .gloria-hallelujah-regular {
+        font-size: 2.2rem;
+    }
+
+    #work {
+        padding: 0 5vw;
+        gap: 30px;
+    }
+
+    .workcontent {
+        width: 60%;
+    }
+
+    .skillscontent {
+        width: 40%;
+    }
+}
