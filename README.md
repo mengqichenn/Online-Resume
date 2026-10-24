@@ -8,6 +8,7 @@ This project is my first introduction to web development using **HTML and CSS**.
 As part of my transition into computer science, I created this personal portfolio to practice the fundamentals of web development while presenting my background, professional experiences, skills, and interests.
 
 The website is built with basic HTML and CSS, with a focus on page structure, styling, layout, and responsive design.
+It's accessible via https://mengqichenn.github.io/Online-Resume/ .
 
 ## 🛠️ Technologies Used
 
